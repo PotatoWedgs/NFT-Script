@@ -6,10 +6,12 @@ t = []
 
 
 def generate_nfts():
-    directory1 = r"C:\Users\Khaldi PC\Pictures\ColdByte NFTs\NFT Scripts\images\Layer1"
-    directory2 = r"C:\Users\Khaldi PC\Pictures\ColdByte NFTs\NFT Scripts\images\Layer2"
-    directory3 = r"C:\Users\Khaldi PC\Pictures\ColdByte NFTs\NFT Scripts\images\Layer3"
-    directoryf = r"C:\Users\Khaldi PC\Pictures\ColdByte NFTs\NFT Scripts\images\Generated NFTs"
+    print("Generating NFTs...")
+
+    directory1 = r"/Users/afreemyousuf/Documents/AmmarCoding/NFT-Script/NFT-Script/MacOS-Script/images/Layer1"
+    directory2 = r"/Users/afreemyousuf/Documents/AmmarCoding/NFT-Script/NFT-Script/MacOS-Script/images/Layer2"
+    directory3 = r"/Users/afreemyousuf/Documents/AmmarCoding/NFT-Script/NFT-Script/MacOS-Script/images/Layer3"
+    directoryf = r"/Users/afreemyousuf/Documents/AmmarCoding/NFT-Script/NFT-Script/MacOS-Script/images/Generated NFTs"
 
     t = [os.listdir(directory1), os.listdir(directory2), os.listdir(directory3)]
     
@@ -28,5 +30,7 @@ def generate_nfts():
         final = Image.alpha_composite(base, layer3)
 
         final.save(os.path.join(directoryf, f'final{z}.png'))
+    
+    print("Generating NFTs Complete!")
     
 generate_nfts()
